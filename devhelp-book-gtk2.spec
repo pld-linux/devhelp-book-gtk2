@@ -1,6 +1,6 @@
 Summary:	DevHelp book: gtk
 Summary(pl):	Ksi±¿ka do DevHelp'a o gtk
-Name:		devhelp-book-gtk
+Name:		devhelp-book-gtk2
 Version:	2.0
 Release:	1
 License:	GPL

@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://www.devhelp.net/books/books/gtk-2.0.tar.gz
+# Source0-md5:	795dd5a42ee2a3624d8b8bffab7694ad
 URL:		http://www.devhelp.net/
 Requires:	devhelp
 BuildArch:	noarch

@@ -1,5 +1,5 @@
-Summary:	DevHelp book: gtk
-Summary(pl):	Ksi±¿ka do DevHelp'a o gtk
+Summary:	DevHelp book: gtk 2.0
+Summary(pl):	Ksi±¿ka do DevHelpa o gtk 2.0
 Name:		devhelp-book-gtk2
 Version:	2.0
 Release:	1
@@ -11,34 +11,28 @@ Requires:	devhelp
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6/share/devhelp/
+%define		_prefix		/usr/X11R6/share/devhelp
 
 %description
-DevHelp book about gtk 1.2
+DevHelp book about gtk 2.0.
 
 %description -l pl
-Ksi±¿ka do DevHelp o gtk 1.2
+Ksi±¿ka do DevHelpa o gtk 2.0.
 
 %prep
-%setup -q -c gtk-%{version} -n gtk-%{version}
-
-%build
-mv -f book gtk-%{version}
-mv -f book.devhelp gtk-%{version}.devhelp
+%setup -q -c -n gtk-%{version}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_prefix}/{books/gtk-%{version},specs}
 
-install -d $RPM_BUILD_ROOT%{_prefix}/books/gtk-%{version}
-install -d $RPM_BUILD_ROOT%{_prefix}/specs
-install gtk-%{version}.devhelp $RPM_BUILD_ROOT%{_prefix}/specs
-install gtk-%{version}/* $RPM_BUILD_ROOT%{_prefix}/books/gtk-%{version}
+install book.devhelp $RPM_BUILD_ROOT%{_prefix}/specs/gtk-%{version}.devhelp
+install book/* $RPM_BUILD_ROOT%{_prefix}/books/gtk-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files 
 %defattr(644,root,root,755)
-#%doc *.gz
-%{_prefix}/books
-%{_prefix}/specs
+%{_prefix}/books/*
+%{_prefix}/specs/*

@@ -1,5 +1,5 @@
 Summary:	DevHelp book: GTK+ 2.0
-Summary(pl.UTF-8):   Książka do DevHelpa o GTK+ 2.0
+Summary(pl.UTF-8):	Książka do DevHelpa o GTK+ 2.0
 Name:		devhelp-book-gtk2
 Version:	2.0
 Release:	1
